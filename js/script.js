@@ -15,7 +15,16 @@ createApp({
         saveTodos() {
             axios.post('writejson.php', this.todos);
         },
+        addTodo() {
+            let text = this.newTodo.trim();
+            if (text) {
+                this.todos.push({ text: text });
+                this.newTodo = '';
+                this.saveTodos();
+            }
+        }
     },
+
 
     created() {
         axios.get('readjson.php')

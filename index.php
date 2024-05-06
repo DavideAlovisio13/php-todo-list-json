@@ -16,6 +16,7 @@
 
 <body>
     <div id="app">
+    <input v-model="newTodo" @keyup.enter="addTodo">
         <ul>
             <li v-for="(todo, index) in todos">
                 <span>{{ todo.text }}</span>
