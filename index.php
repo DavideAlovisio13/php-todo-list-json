@@ -17,8 +17,8 @@
 
 <body>
     <div id="app">
-        <div class="container">
-            <h1>ToDoList</h1>
+        <div class="container my-5">
+            <h1 class="py-3">ToDoList</h1>
             <input v-model="newTodo" @keyup.enter="addTodo" class="todo-input">
             <ul>
                 <li v-for="(todo, index) in todos" class="todo-item">
