@@ -22,7 +22,11 @@ createApp({
                 this.newTodo = '';
                 this.saveTodos();
             }
-        }
+        },
+        toggleCompleted(index) {
+            this.todos[index].completed = !this.todos[index].completed;
+            this.saveTodos();
+        },
     },
 
 
